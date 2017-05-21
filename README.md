@@ -6,6 +6,52 @@
 
 ### Именование переменных и функций
 
+Явное лучше неявного. Не нужно использовать сокращения для имён,
+даже если кажется, что эти сокращения общеизвестны. Другой человек,
+возможно, раньше с ними не сталкивался. Также сокращения вынуждают держать
+в голове контекст их использования:
+
+```javascript
+console.log(e); // что такое e?
+
+// Плохо, сокращение требует контекста:
+document.addEventListener('click', (e) => {
+	console.log(e);
+});
+
+ try {} catch (e) {
+	 console.log(e);
+ }
+
+ // Хорошо, явное имя
+document.addEventListener('click', (event) => {
+	console.log(event);
+})
+
+try {} catch (error) {
+	console.log(error);
+}
+```
+
+Имена предикатов должны быть вопросами, на которые можно
+ответить «да» или «нет». Если вопрос сам по себе не является глаголом (например,
+includes, equals), имя предиката должно начинаться с is, are, has, can и т. п.:
+
+```javascript
+// плохо
+const authorisation = Boolean(state.currentUser);
+const allowPublishing = state.currentUser.permissions.includes('publishing');
+const strictEquality = (a) => (b) => a === b;
+
+// хорошо
+const isAuthorised = Boolean(state.currentUser);
+const canPublish = state.currentUser.permissions.includes('publishing');
+const hasFriends = state.currentUser.friends.length > 0;
+const strictEquals = (a) => (b) => a === b;
+```
+
+#### Переменные
+
 Имя переменной должно описывать суть хранимого значения и начинаться
 с существительного (или прилагательного, а затем существительного):
 
@@ -15,7 +61,10 @@ const getUserName = 'andrew-r';
 
 // хорошо
 const userName = 'andrew-r';
+const currentPageNumber = 1;
 ```
+
+#### Функции
 
 Имя функции должно начинаться с глагола:
 
@@ -37,27 +86,14 @@ function onClick() {}
 function goToNextPage() {}
 ```
 
-Указывайте в названииях функций все сайд эффекты, если таковые имеются:
+Если функция возвращает или устанавливает какое-либо значение, её имя должно начиться с `get` или, соответственно, `set`:
 
 ```javascript
 // плохо
-funcion goToNextPage() {
-	logPageVisite(this.page); // side effect
-	this.page++;
-}
+function userAge() {}
+function userName(name) {}
 
 // хорошо
-function logVisiteAndGoToNextPage() {}
-```
-
-Если название выглядит странным или длинным, значит пришло время этот метод отрефакторить. Вспоминаем принципы разграничения ответственностей.
-
-Следует отличать фукцнии от процедур. Функция именуется по типу возвращаемого значения. Процедура же, по типу действия и объекта над которым это действие соверщается.
-
-```javascript
-// функция
-function getNextPage() {}
-
-// процедура
-function goToNextPage() {}
+function getUserAge() {}
+function setUserName(name) {}
 ```
