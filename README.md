@@ -85,3 +85,15 @@ function onClick() {}
 // хорошо
 function goToNextPage() {}
 ```
+
+Если функция возвращает или устанавливает какое-либо значение, её имя должно начиться с `get` или, соответственно, `set`:
+
+```javascript
+// плохо
+function userAge() {}
+function userName(name) {}
+
+// хорошо
+function getUserAge() {}
+function setUserName(name) {}
+```
