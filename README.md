@@ -6,3 +6,4 @@
 - [Объявление параметров функций](tips/004-function-parameters)
 - [Работа с потенциально несуществующими данными](tips/005-potentially-non-existent-data)
 - [Хранение утилитарных функций в проекте](tips/006-utils-directory)
+- [Когда следует дублировать код?](tips/007-when-to-prefer-duplication)
