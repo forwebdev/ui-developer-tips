@@ -43,9 +43,11 @@ export {
 };
 ```
 
-С помощью babel-плагина [export extensions transform](https://babeljs.io/docs/plugins/transform-export-extensions/) можно написать то же самое лаконичнее:
+С помощью babel-плагина [export extensions](https://babeljs.io/docs/plugins/transform-export-extensions/) можно написать то же самое лаконичнее:
 
 ```
 export { default as chunk } from './chunk/chunk';
 export { default as pluck } from './pluck/pluck';
 ```
+
+В результате можно будет писать импорты вида `import { chunk } from '../utils';`.
