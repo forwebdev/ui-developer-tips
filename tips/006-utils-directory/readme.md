@@ -25,28 +25,27 @@ utils
     └── pluck.spec.js
 ```
 
-В дополнение к этому, вы можете использовать ещё одну хорошую практику: создайте в папке `utils` файл `index.js` и там импортируйте и экспортируйте ваши функции.
-```
-// index.js
+В случае с одним файлом `utils.js` можно импортировать несколько функций одновременно:
 
-import chunk from './chunk/chunk'
-import flatMap from './flat-map/flat-map'
-import pluck from './pluck/pluck'
+```
+import { chunk, pluck } from '../utils.js';
+```
+
+Чтобы сохранить такую возможность после разбиения `utils.js` на отдельные файлы, добавьте в директорию `utils` файл `index.js` и экспортируйте из него все хелперы:
+
+```
+import chunk from './chunk/chunk';
+import pluck from './pluck/pluck';
 
 export {
 	chunk,
-	flatMap,
 	pluck
-}
+};
 ```
 
-Это позволит не импортировать в проекте вот так:
+С помощью babel-плагина [export extensions transform](https://babeljs.io/docs/plugins/transform-export-extensions/) можно написать то же самое лаконичнее:
+
 ```
-import chunk from './utils/chunk/chunk'
-import flatMap from './utils/flat-map/flat-map'
-import pluck from './utils/pluck/pluck'
-```
-А вот так:
-```
-import { chunk, flatMap, pluck } from './utils'
+export { default as chunk } from './chunk/chunk';
+export { default as pluck } from './pluck/pluck';
 ```
