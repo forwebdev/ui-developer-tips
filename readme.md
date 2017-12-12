@@ -8,3 +8,4 @@
 - [Хранение утилитарных функций в проекте](tips/006-utils-directory)
 - [Когда следует дублировать код?](tips/007-when-to-prefer-duplication)
 - [Доступные уведомления](tips/008-alerts-accessibility)
+- [Состояние загружаемых данных](tips/009-data-state)
