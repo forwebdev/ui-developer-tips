@@ -9,3 +9,4 @@
 - [Когда следует дублировать код?](tips/007-when-to-prefer-duplication)
 - [Доступные уведомления](tips/008-alerts-accessibility)
 - [Состояние загружаемых данных](tips/009-data-state)
+- [Доступные переходы между страницами в SPA](tips/010-accessible-spa-page-transitions)
