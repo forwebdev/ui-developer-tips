@@ -32,3 +32,4 @@ fetch('...')
 		loadedComments = ((response.result || {}).user || {}).comments || [];
 	});
 ```
+

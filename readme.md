@@ -10,3 +10,6 @@
 - [Доступные уведомления](tips/008-alerts-accessibility)
 - [Состояние загружаемых данных](tips/009-data-state)
 - [Доступные переходы между страницами в SPA](tips/010-accessible-spa-page-transitions)
+
+### License
+MIT © [andrew--r](https://github.com/andrew--r)

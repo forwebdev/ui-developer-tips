@@ -51,3 +51,4 @@ export { default as pluck } from './pluck/pluck';
 ```
 
 В результате можно будет писать импорты вида `import { chunk } from '../utils';`.
+
