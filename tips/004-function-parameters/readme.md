@@ -22,3 +22,4 @@ initTabs(document.querySelector('.js-tabs'), {
 	trackEvnets: false,
 });
 ```
+
