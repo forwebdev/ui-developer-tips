@@ -11,5 +11,4 @@
 - [Состояние загружаемых данных](tips/009-data-state)
 - [Доступные переходы между страницами в SPA](tips/010-accessible-spa-page-transitions)
 
-### License
-MIT © [andrew--r](https://github.com/andrew--r)
+![License: CC BY 4.0](https://licensebuttons.net/l/by/4.0/80x15.png)](https://creativecommons.org/licenses/by/4.0/)
