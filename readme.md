@@ -10,5 +10,6 @@
 - [Доступные уведомления](tips/008-alerts-accessibility)
 - [Состояние загружаемых данных](tips/009-data-state)
 - [Доступные переходы между страницами в SPA](tips/010-accessible-spa-page-transitions)
+- [Импорт модулей относительно проекта, а не текущего файла](tips/011-project-relative-imports)
 
 [![License: CC BY 4.0](https://licensebuttons.net/l/by/4.0/80x15.png)](https://creativecommons.org/licenses/by/4.0/)
