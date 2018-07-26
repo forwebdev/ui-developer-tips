@@ -14,5 +14,6 @@
 - [Автоудаление UTM-меток](tips/012-utm-parameters)
 - [`Element.matches()`](tips/013-element-matches)
 - [Три тонкости, о которых нужно помнить при использовании стрелочных функций](tips/014-arrow-functions)
+- [Выделение текста при кликах по `label`](tips/015-label-text-selection)
 
 [![License: CC BY 4.0](https://licensebuttons.net/l/by/4.0/80x15.png)](https://creativecommons.org/licenses/by/4.0/)
