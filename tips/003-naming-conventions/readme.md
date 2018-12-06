@@ -15,8 +15,8 @@ document.addEventListener('click', (e) => {
  }
 
  // Хорошо, явное имя
-document.addEventListener('click', (event) => {
-	console.log(event);
+document.addEventListener('click', (evt) => {
+	console.log(evt);
 })
 
 try {} catch (error) {
