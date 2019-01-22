@@ -16,5 +16,6 @@
 -   [Три тонкости, о которых нужно помнить при использовании стрелочных функций](tips/014-arrow-functions)
 -   [Выделение текста при кликах по `label`](tips/015-label-text-selection)
 -   [`URL.createObjectURL` вместо `FileReader.readAsDataURL`](tips/016-blob-urls)
+-   [Конфигурация CI как код](tips/017-ci-configuration)
 
 [![License: CC BY 4.0](https://licensebuttons.net/l/by/4.0/80x15.png)](https://creativecommons.org/licenses/by/4.0/)
