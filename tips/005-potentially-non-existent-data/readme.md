@@ -33,3 +33,16 @@ fetch('...')
 	});
 ```
 
+## Обновление от 29.04.2020: optional chaining
+
+В ECMAScript 2020 появился [оператор optional chaining](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining), решающий эту задачу гораздо более удобно:
+
+```javascript
+let loadedComments = null;
+
+fetch('...')
+  .then((response) => response.json())
+  .then((response) => {
+    loadedComments = response.result?.user?.comments || [];
+  });
+```
